@@ -1,0 +1,36 @@
+_BASE_: "COCO_OVD_Base_PIS.yaml"
+
+MODEL:
+  RESET_CLS_TESTS: True
+  TEST_CLASSIFIERS: ['datasets/zeroshot_weights/coco_clip_a+photo+cname_o.npy']
+  TEST_NUM_CLASSES: [228]
+  PIS_PROP_PATH: ''
+  VLM_TRAIN_DES_PATH: ''
+  VLM_EVAL_DES_PATH: ''
+  FREEZE_IMAGE_BACKBONE: False
+  ROI_BOX_HEAD:
+    IGNORE_ZERO_CATS: False
+    # Enable paper-style DA-MIL for weak (image-level) supervision.
+    # - Top-k soft selection with temperature tau
+    # - Reweight by RPN objectness prior (rho)
+    IMAGE_LABEL_LOSS: 'mil_topk'
+    MIL_TOPK: 5
+    MIL_TAU: 1.0
+    MIL_USE_PROP_SCORE: True
+    DPDN:
+      KL_WEIGHT: 1.0
+
+DATASETS:
+  TRAIN: ("coco_zeroshot_train_oriorder", "food2k_train")
+
+DATALOADER:
+  DATASET_RATIO: [1, 4]
+  USE_RFS: [False, False]
+  DATASET_BS: [4, 16]
+  DATASET_MIN_SIZES: [[800, 800], [400, 400]]
+  DATASET_MAX_SIZES: [1333, 667]
+  DATASET_ANN: ['box', 'image']
+
+WITH_IMAGE_LABELS: True
+
+OUTPUT_DIR: output/coco_ovd_food2k_PIS_with_cap_new
