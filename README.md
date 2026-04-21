@@ -62,10 +62,10 @@ You can place more figures in the `paper/` directory later and continue referenc
 The upstream codebase was tested with **PyTorch 1.10.0** and **CUDA 11.3**. For this repository, a practical setup is:
 
 ```bash
-conda create -n simple python=3.9 -y
-conda activate simple
+conda create -n dpdn python=3.12 -y
+conda activate dpdn
 
-conda install pytorch==1.10.0 torchvision==0.11.0 torchaudio==0.10.0 cudatoolkit=11.3 -c pytorch -c conda-forge
+pip install torch==2.5.1 torchvision==0.20.1 torchaudio==2.5.1 --index-url https://download.pytorch.org/whl/cu118
 
 pip install -r requirements.txt
 
@@ -75,17 +75,10 @@ cd ..
 ```
 
 ## Dataset Preparation
-
-This repository currently uses absolute local paths and expects the dataset root under:
-
-```text
-/22liushoulong/datasets/
-```
-
 The registered food dataset layout is:
 
 ```text
-/22liushoulong/datasets/
+/.../datasets/
 └── ZSFooD2/
     ├── train2017/
     ├── val2017/
@@ -136,38 +129,9 @@ python train_net.py \
   --num-gpus 8 \
   --config-file configs/coco/COCO_OVD_Base_PIS.yaml \
   --eval-only \
-  MODEL.WEIGHTS output/coco_ovd_PIS_vlm_name_prompt_cfcr/model_0069999.pth
+  MODEL.WEIGHTS output/coco_ovd_PIS_vlm_name_prompt_cfcr/model_best.pth
 ```
 
-## Current Local Result
-
-According to the local evaluation log for `output/coco_ovd_PIS_vlm_name_prompt_cfcr/model_0069999.pth`, the current checkpoint reports:
-
-| Split | AP | AP50 | AP75 | Seen AP50 | Unseen AP50 |
-| --- | ---: | ---: | ---: | ---: | ---: |
-| `coco_generalized_zeroshot_val` | 71.27 | 75.01 | 73.70 | 88.99 | 28.29 |
-
-If you later rerun evaluation with the final paper checkpoint, replace this table with the paper-ready numbers.
-
-## Recommended Files To Release
-
-For a clean public repository, it is recommended to keep:
-
-- source code
-- config files
-- lightweight classifier weights such as `.npy`
-- paper source zip packages
-- a few README figures
-- scripts for preprocessing and evaluation
-
-It is **not** recommended to commit all local training outputs, caches, and temporary feature tensors directly into normal Git history.
-
-## Available Paper Source Packages
-
-- `paper/HSR_Det_final_split_main.zip`
-- `paper/HSR_Det_final_split_appdix.zip`
-
-These can be linked in the published README or attached as release assets.
 
 ## Acknowledgement
 
