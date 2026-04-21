@@ -1,7 +1,5 @@
 # HSR-Det: Open-Vocabulary Food Detection with VLM Name Prompts and CFCR
 
-> This file is intended to be used as the repository root `README.md` when you publish the project to GitHub.  
-> If you keep this file inside `github_publish_pack/`, change image paths like `paper/...` to `../paper/...`.
 
 ## Introduction
 
@@ -22,7 +20,6 @@ Compared with the original upstream OVD codebase, this version is adapted for fo
 - Dataset: `ZSFooD2`
 - Number of categories: `228`
 - Main training config used in this repo: `configs/coco/COCO_OVD_Base_PIS.yaml`
-- Recommended environment name: `simple`
 
 ## Method Overview
 
