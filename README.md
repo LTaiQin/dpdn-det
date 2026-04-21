@@ -131,7 +131,7 @@ python train_net.py \
   --eval-only \
   MODEL.WEIGHTS output/coco_ovd_PIS_vlm_name_prompt_cfcr/model_best.pth
 ```
-
+The model weights are open source at https://huggingface.co/LTaiQin/DPDN-Det
 
 ## Acknowledgement
 
