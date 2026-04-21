@@ -10,7 +10,6 @@ Compared with the original upstream OVD codebase, this version is adapted for fo
 - ZSFooD2 dataset registration and zero-shot splits
 - VLM-generated class/name prompt features
 - PIS-based training on top of the OVD framework
-- confusion-aware refinement related modules such as `DDFM`
 - paper source packages and qualitative visualization assets
 
 ## Highlights
