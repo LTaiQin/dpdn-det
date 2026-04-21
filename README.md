@@ -40,7 +40,6 @@ The current repository version combines the following ingredients:
   <img src="paper/comparison_4x5_grid.png" alt="qualitative comparison" width="100%">
 </p>
 
-You can place more figures in the `paper/` directory later and continue referencing them in this README with the same format.
 
 ## Repository Structure
 
