@@ -92,6 +92,7 @@ The registered food dataset layout is:
         └── instances_train2017_seen_2_oriorder_cat_info.json
 ```
 Additional data required for training: https://huggingface.co/datasets/LTaiQin/ZSFooD_vlm_des
+
 Before training on another machine, you should update the absolute paths in the config files and dataset registration code.
 
 ## Main Training Config
