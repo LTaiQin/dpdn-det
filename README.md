@@ -1,4 +1,4 @@
-# HSR-Det: Open-Vocabulary Food Detection with VLM Name Prompts and CFCR
+# Visual Food Object Detection via Open-Vocabulary Learning
 
 
 ## Introduction
