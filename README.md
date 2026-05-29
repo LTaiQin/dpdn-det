@@ -37,7 +37,7 @@ The current repository version combines the following ingredients:
 ### Qualitative Comparison
 
 <p align="center">
-  <img src="paper/comparison_4x5_grid.png" alt="qualitative comparison" width="100%">
+  <img src="paper/qualitative_comparison_2x5_01.png" alt="qualitative comparison" width="100%">
 </p>
 
 
