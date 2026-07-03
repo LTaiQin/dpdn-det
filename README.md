@@ -83,7 +83,8 @@ Experiments in the paper involve:
 - **Food2K**: auxiliary image-level weak-supervision source after strict semantic-leakage filtering
 
 Depending on your local preprocessing pipeline, some paths or cached artifacts may still use earlier folder names. Please update config paths and dataset registration entries accordingly.
-
+Download link for an additional 195 validation data samples:
+[additional 195 validation data samples](https://drive.google.com/file/d/1_a2O_w6s7lNU3pd4seOGsRIGeeeltGgf/view?usp=drive_link)
 ## Dataset Preparation
 
 A typical dataset layout is:
